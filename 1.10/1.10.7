@@ -1,0 +1,36 @@
+/* This program draws a big tower from Karel's starting spot */
+public class BigTowerKarel extends SuperKarel
+{
+    public void run()
+    {
+        while(notFacingNorth())
+        {
+              turnLeft();
+        }
+        
+        while(frontIsClear())
+        {
+            putBall();
+            move();
+        }
+
+        while(noBallsPresent())
+        {
+            putBall();
+        }
+    }
+    
+    private void spinLeft()
+    {
+        turnLeft();
+        turnLeft();
+        turnLeft();
+    }
+    
+    private void spinRight()
+    {
+        turnRight();
+        turnRight();
+        turnRight();
+    }
+}
