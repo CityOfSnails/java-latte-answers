@@ -1,0 +1,40 @@
+// this is a comment
+public class RacingKarel extends SuperKarel
+{
+    public void run()
+    {
+        for(int i = 0; i < 4; i++)
+        {
+            while(frontIsClear())
+            {
+                move();
+            }
+            
+            while(frontIsBlocked())
+            {
+                putStack();
+                turnLeft();
+            }
+        }
+    }
+    
+    private void putStack()
+    {
+        putBall();
+        putBall();
+        putBall();
+        putBall();
+        putBall();
+        putBall();
+        putBall();
+        putBall();
+    }
+    
+    // this part isnt used
+    // but requirements want 3 methods
+    private void placeholder()
+    {
+        turnLeft();
+        turnRight();
+    }
+}
