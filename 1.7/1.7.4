@@ -1,0 +1,52 @@
+// Add comments to each of your methods
+public class TwoTowersKarel extends Karel
+{
+	public void run()
+	{
+    	move();
+        buildTower();
+        comeDown();
+        move();
+        move();
+        buildTower();
+        move();
+        turnRight();
+	}
+    
+    // turns Karel right 
+    private void turnRight()
+    {
+        turnLeft();
+        turnLeft();
+        turnLeft();
+    }
+
+    // has Karel turn opposite direction from
+    private void turnAround()
+    {
+        turnLeft();
+        turnLeft();
+    }
+    
+     /* must be facing up
+    * as well as at least in third row
+    */
+    private void comeDown()
+    {
+        turnAround();
+        move();
+        move();
+        turnLeft();
+    }
+    
+    // must be in tower location before running
+    private void buildTower()
+    {
+        turnLeft();
+        putBall();
+        move();
+        putBall();
+        move();
+        putBall();
+    }
+}
