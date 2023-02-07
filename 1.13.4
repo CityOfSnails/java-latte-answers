@@ -1,0 +1,32 @@
+public class RandomHurdles extends SuperKarel
+{
+    public void run()
+    {
+        jumpHurdle();
+        turnLeft();
+        move();
+        turnRight();
+        
+        while(frontIsClear())
+        {
+            move();
+        }
+        if(frontIsBlocked())
+        {
+            turnRight();
+            move();
+            turnLeft();
+        }
+    }
+    
+    private void jumpHurdle()
+    {
+        turnLeft();
+        move();
+        turnRight();
+        move();
+        turnRight();
+        move();
+        turnLeft();
+    }
+}
