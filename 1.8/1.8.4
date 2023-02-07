@@ -1,0 +1,44 @@
+public class TwoTowersKarel extends SuperKarel
+{
+
+	public void run()
+	{
+		move();
+		buildTower();
+		climbDown();
+		
+		move();
+		buildTower();
+	}
+	
+	/* precondition: Karel is at the top of a tower
+	* (or at least 3 rows high)
+	* postcondition: Karel is now 3 rows lower
+	*/
+	private void climbDown()
+	{
+	    move();
+	    turnRight();
+	    move();
+	    move();
+	    move();
+	    turnLeft();
+	}
+	
+	/*precondition: Karel is at the bottom of
+	* the location of where you want the tower
+	* postcondition: Karel is at the top of a 3-ball tower
+	*/
+	private void buildTower()
+	{
+	    turnLeft();
+	    putBall();
+	    move();
+	    putBall();
+	    move();
+	    putBall();
+	    move();
+	    turnRight();
+	}
+
+}
