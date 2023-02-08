@@ -1,0 +1,36 @@
+// this is a comment
+public class TowerBuilderKarel extends SuperKarel
+{
+    public void run()
+    {
+        makeTower();
+        
+        while (frontIsClear())
+        {
+            if(frontIsClear())
+            {
+                move();
+            }
+            if(frontIsClear())
+            {
+                move();
+                makeTower();
+            }
+        }
+    }
+    
+    private void makeTower()
+    {
+        turnLeft();
+        putBall();
+        move();
+        putBall();
+        move();
+        putBall();
+        
+        turnAround();
+        move();
+        move();
+        turnLeft();
+    }
+}
