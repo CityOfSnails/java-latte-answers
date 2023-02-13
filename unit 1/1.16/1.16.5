@@ -1,0 +1,53 @@
+// this is a comment
+public class DoubleTennisBallsKarel extends SuperKarel
+{
+    public void run()
+    {
+        move();
+        takeSeven();
+        
+        // world 2 starts with more than 7 balls
+        // so checking if theres balls checks if
+        // theyre on w2
+        if(ballsPresent())
+        {
+            putTwentyEight();
+        }
+        else
+        {
+            putFourteen();
+        }
+        
+        turnAround();
+        move();
+        turnAround();
+    }
+    
+    
+    private void takeSeven()
+    {
+        takeBall();
+        takeBall();
+        takeBall();
+        takeBall();
+        takeBall();
+        takeBall();
+        takeBall();
+    }
+    
+    private void putTwentyEight()
+    {
+        for(int i = 0; i < 28; i++)
+        {
+            putBall();
+        }
+    }
+    
+    private void putFourteen()
+    {
+        for(int i = 0; i < 14; i++)
+        {
+            putBall();
+        }
+    }
+}
