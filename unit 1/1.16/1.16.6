@@ -1,0 +1,87 @@
+// this is done in order of world size
+
+public class MidpointKarel extends SuperKarel
+{
+    public void run()
+    {
+        if(frontIsBlocked())
+        {
+            putBall();
+        }
+        
+        worldThree();
+        
+        if(noBallsPresent())
+        {
+            worldOne();
+        }
+        
+        if(noBallsPresent())
+        {
+            worldTwo();
+        }
+        
+        if(noBallsPresent())
+        {
+            putBall();
+        }
+    }
+    
+    private void worldTwo()
+    {
+        if(frontIsClear())
+        {
+            move();
+            
+            if(frontIsBlocked())
+            {
+                turnAround();
+                move();
+                move();
+                move();
+                move();
+                putBall();
+                turnAround();
+            }
+        }
+    }
+    
+    private void worldOne()
+    {
+        if(frontIsClear())
+        {
+            move();
+            move();
+            
+            if(frontIsBlocked())
+            {
+                turnAround();
+                move();
+                move();
+                move();
+                putBall();
+                turnAround();
+            }
+        }
+    }
+    
+    private void worldThree()
+    {
+        if(frontIsClear())
+        {
+            move();
+            move();
+            move();
+            move();
+            
+            if(frontIsBlocked())
+            {
+                turnAround();
+                move();
+                move();
+                putBall();
+                turnAround();
+            }
+        }
+    }
+}
