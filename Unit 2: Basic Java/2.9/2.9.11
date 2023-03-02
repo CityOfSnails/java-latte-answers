@@ -13,3 +13,14 @@ public class Factorial extends ConsoleProgram
         System.out.println (facNum);
     }
 }
+
+
+
+
+
+// DO NOT PASTE ANYTHING BEYOND THIS COMMENT
+// THIS IS JUST NOTES
+
+// this stupid problem gave me SO MUCH TROUBLE
+// idc if you copy+paste this
+// it suckssssssssss
