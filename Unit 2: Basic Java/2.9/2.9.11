@@ -1,0 +1,15 @@
+public class Factorial extends ConsoleProgram
+{
+    public void run()
+    {
+        int userNum = readInt("What number would you like to compute the factorial for? ");
+        int facNum = 0 + userNum;
+        
+        for(int i = 1; i < userNum; i++)
+        {
+            facNum *= i;
+        }
+        
+        System.out.println (facNum);
+    }
+}
