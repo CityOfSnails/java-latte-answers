@@ -1,0 +1,18 @@
+public class Echo extends ConsoleProgram
+{
+    public void run()
+    {
+        String text = "Anybody home?";
+        int numTimes = readInt("Input how many times to echo. ");
+        echo(numTimes, text);
+    }
+
+    private void echo(int numTimes, String text)
+    {
+        while (numTimes > 0)
+        {
+            System.out.println(text);
+            numTimes--;
+        }
+    }
+}
