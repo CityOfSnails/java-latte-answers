@@ -1,0 +1,16 @@
+public class Countdown extends ConsoleProgram
+{
+    public void run()
+    {
+        countdownFrom(5);
+    }
+    
+    private void countdownFrom(int x)
+    {
+        while (x >= 0)
+        {
+            System.out.println(x);
+            x--;
+        }
+    }
+}
